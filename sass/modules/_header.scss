@@ -1,0 +1,143 @@
+.header {
+    background-color: $white;
+    color: $gray;
+}
+
+.sub-header {
+    box-shadow: 0px 1px 0px rgba(167, 167, 167, 0.25);
+}
+
+.header-logo {
+    width: 130px;
+    height: auto;
+    margin: 14px 0;
+    margin-right: 50px;
+
+    img {
+        width: 100%;
+    }
+}
+
+/**
+* grow if space is available while logo takes up fixed space
+* stack profile and nav with wrap
+*/
+.header-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @include e(right) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@include mq(xl) {
+    .header-options {
+        @include e(right) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1152px) {
+    .header-options {
+        flex-wrap: nowrap;
+
+        @include e(right) {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include e(link) {
+        margin-right: 40px;
+        padding: 14px 0;
+        width: 100%;
+        font-size: 14px;
+        color: $color-text;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover {
+            color: $color-state--blue;
+        }
+
+        @include m(is-active) {
+            color: $color-state--green;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .header-nav {
+        flex-direction: row;
+        width: auto;
+
+        @include e(link) {
+            width: auto;
+        }
+    }
+}
+
+.header-profile {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    @include e(image) {
+        margin-right: 10px;
+    }
+
+    @include e(info) {
+        text-transform: capitalize;
+        font-size: 14px;
+        color: $color-text;
+        &:hover {
+            cursor: pointer;
+            color: $color-state--green;
+        }
+    }
+}
+
+.tabs {
+    padding-top: 12px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include e(tab) {
+        margin-right: 10px;
+        padding: 12px 22px;
+        border: 1px solid #e6ecef00;
+        border-bottom: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: #78909c;
+
+        &:hover {
+            border: 1px solid #e6ecef;
+            border-bottom: 0;
+        }
+
+        @include m(is-active) {
+            border: 1px solid #e6ecef;
+            border-bottom: 0;
+            color: #42a5f5;
+        }
+    }
+}
