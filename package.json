@@ -22,16 +22,8 @@
     "serve": "browser-sync start --server \"dist\" --files \"dist\" --port 8081",
     "deploy": "npm run build && gh-pages -d dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sshikhrakar/Sass-Starter.git"
-  },
-  "author": "Shirish Shikhrakar",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sshikhrakar/Sass-Starter/issues"
-  },
-  "homepage": "https://github.com/sshikhrakar/Sass-Starter#readme",
+  "homepage": "https://revortni.github.io/Design-stuff/",
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "connect-history-api-fallback": "^1.6.0",
