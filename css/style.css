@@ -723,16 +723,12 @@ option {
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
-    flex-direction: row;
-    flex-wrap: wrap; }
-    .header__options__right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; }
-      @media (min-width: 1152px) {
-        .header__options__right {
-          flex-direction: row;
-          align-items: center; } }
+    flex-direction: row; }
+
+.header-options__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
 
 .logo {
   width: 130px;
