@@ -1,13 +1,33 @@
 .header {
     background-color: $white;
     color: $gray;
+
+    @include e(sub-header) {
+        box-shadow: 0px 1px 0px rgba(167, 167, 167, 0.25);
+    }
+
+    @include e(options) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        @include e(right) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            @include mq(xl) {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
 }
 
-.sub-header {
-    box-shadow: 0px 1px 0px rgba(167, 167, 167, 0.25);
-}
-
-.header-logo {
+.logo {
     width: 130px;
     height: auto;
     margin: 14px 0;
@@ -18,54 +38,13 @@
     }
 }
 
-/**
-* grow if space is available while logo takes up fixed space
-* stack profile and nav with wrap
-*/
-.header-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    @include e(right) {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@include mq(xl) {
-    .header-options {
-        @include e(right) {
-            flex-direction: row;
-            align-items: center;
-        }
-    }
-}
-
-@media screen and (min-width: 500px) and (max-width: 1152px) {
-    .header-options {
-        flex-wrap: nowrap;
-
-        @include e(right) {
-            flex-direction: row;
-            align-items: center;
-        }
-    }
-}
-
 .header-nav {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
 
     @include e(link) {
         margin-right: 40px;
         padding: 14px 0;
-        width: 100%;
         font-size: 14px;
         color: $color-text;
 
@@ -80,17 +59,6 @@
         @include m(is-active) {
             color: $color-state--green;
             font-weight: bold;
-        }
-    }
-}
-
-@media screen and (min-width: 1152px) {
-    .header-nav {
-        flex-direction: row;
-        width: auto;
-
-        @include e(link) {
-            width: auto;
         }
     }
 }
