@@ -12,18 +12,14 @@
         align-items: center;
         flex-grow: 1;
         flex-direction: row;
-        flex-wrap: wrap;
+    }
+}
 
-        @include e(right) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            @include mq(xl) {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
+.header-options {
+    @include e(right) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
