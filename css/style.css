@@ -469,7 +469,7 @@ strong:after {
     width: 100%;
     max-width: 960px; } }
 
-@media (min-width: 1152px) {
+@media (min-width: 1200px) {
   .container {
     width: 100%;
     max-width: 1140px; } }
@@ -592,7 +592,7 @@ strong:after {
   .col-lg-12 {
     width: 100%; } }
 
-@media (min-width: 1152px) {
+@media (min-width: 1200px) {
   .col-xl-1 {
     width: 8.33333%; }
   .col-xl-2 {
