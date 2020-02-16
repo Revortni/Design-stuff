@@ -1,0 +1,18 @@
+.accordion {
+  border: none;
+  outline: none;
+
+  @include e(panel) {
+    display: none;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+
+  @include m(active) {
+    display: block;
+
+    .accordion__panel {
+      display: block;
+    }
+  }
+}

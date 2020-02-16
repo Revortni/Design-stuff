@@ -1,0 +1,69 @@
+.card {
+  margin-bottom: 16px;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+
+  @include e(header) {
+    box-sizing: border-box;
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+  }
+
+  @include e(header-title) {
+    text-transform: capitalize;
+    margin-right: 37px;
+    color: $black;
+  }
+
+  @include e(count) {
+    &::before {
+      content: "(";
+    }
+
+    &::after {
+      content: ")";
+    }
+
+    font-size: $default-font-size;
+    color: $light-gray;
+  }
+}
+
+.card-content {
+  box-sizing: border-box;
+  margin: 18px;
+  margin-bottom: 20px;
+
+  @include e(header) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  @include e(button) {
+    color: $light-blue;
+    font-size: $s-font-size;
+    text-transform: capitalize;
+  }
+
+  @include e(container) {
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include e(item) {
+    padding: 0 12px;
+    color: $gray;
+    margin-bottom: 10px;
+
+    &:hover {
+      background-color: #f6f8f9;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+}

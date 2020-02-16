@@ -1,111 +1,113 @@
 .header {
-    background-color: $white;
-    color: $gray;
+  background-color: $white;
+  color: $gray;
 
-    @include e(sub-header) {
-        box-shadow: 0px 1px 0px rgba(167, 167, 167, 0.25);
+  @include e(sub-header) {
+    border: 1px solid #cccccc82;
+  }
+
+  @include e(options) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.header-options {
+  @include e(right) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include mq(xl) {
+      flex-direction: row;
+      align-items: center;
     }
-
-    @include e(options) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-grow: 1;
-        flex-direction: row;
-        flex-wrap: wrap;
-
-        @include e(right) {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-
-            @include mq(xl) {
-                flex-direction: row;
-                align-items: center;
-            }
-        }
-    }
+  }
 }
 
 .logo {
-    width: 130px;
-    height: auto;
-    margin: 14px 0;
-    margin-right: 50px;
+  width: 130px;
+  height: auto;
+  margin: 14px 0;
+  margin-right: 50px;
 
-    img {
-        width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 }
 
 .header-nav {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    @include e(link) {
-        margin-right: 40px;
-        padding: 14px 0;
-        font-size: 14px;
-        color: $color-text;
+  @include e(link) {
+    margin-right: 40px;
+    padding: 14px 0;
+    font-size: 14px;
+    color: $color-text;
 
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:hover {
-            color: $color-state--blue;
-        }
-
-        @include m(is-active) {
-            color: $color-state--green;
-            font-weight: bold;
-        }
+    &:last-child {
+      margin-right: 0;
     }
+
+    &:hover {
+      color: $color-state--blue;
+    }
+
+    @include m(is-active) {
+      color: $color-state--green;
+      font-weight: bold;
+    }
+  }
 }
 
 .header-profile {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  @include e(image) {
     margin-right: 10px;
-    display: flex;
-    align-items: center;
-    @include e(image) {
-        margin-right: 10px;
-    }
+  }
 
-    @include e(info) {
-        text-transform: capitalize;
-        font-size: 14px;
-        color: $color-text;
-        &:hover {
-            cursor: pointer;
-            color: $color-state--green;
-        }
+  @include e(info) {
+    text-transform: capitalize;
+    font-size: 14px;
+    color: $color-text;
+    &:hover {
+      cursor: pointer;
+      color: $color-state--green;
     }
+  }
 }
 
 .tabs {
-    padding-top: 12px;
-    font-size: 14px;
-    display: flex;
-    flex-wrap: wrap;
+  padding-top: 12px;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
 
-    @include e(tab) {
-        margin-right: 10px;
-        padding: 12px 22px;
-        border: 1px solid #e6ecef00;
-        border-bottom: 0;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        color: #78909c;
+  @include e(tab) {
+    margin-right: 10px;
+    padding: 12px 22px;
+    border: 1px solid #e6ecef00;
+    border-bottom: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #78909c;
 
-        &:hover {
-            border: 1px solid #e6ecef;
-            border-bottom: 0;
-        }
-
-        @include m(is-active) {
-            border: 1px solid #e6ecef;
-            border-bottom: 0;
-            color: #42a5f5;
-        }
+    &:hover {
+      border: 1px solid #e6ecef;
+      border-bottom: 0;
     }
+
+    @include m(is-active) {
+      border: 1px solid #e6ecef;
+      border-bottom: 0;
+      color: #42a5f5;
+    }
+  }
 }
