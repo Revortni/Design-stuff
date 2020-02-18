@@ -9,47 +9,39 @@
 
 // Reset CSS
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    // Global Clearfixing
-    @if $grid-type == "float" {
-        &:after {
-            clear: both;
-            content: "";
-            display: block;
-        }
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // Base Code
 html,
 body {
-    font-size: 100%;
+  font-size: 100%;
 }
 body {
-    -webkit-font-smoothing: antialiased;
-    color: $color-text;
-    font-family: $font-family--primary;
-    text-rendering: optimizeLegibility;
-    background-color: $whitish;
+  -webkit-font-smoothing: antialiased;
+  color: $color-text;
+  font-family: $font-family--primary;
+  text-rendering: optimizeLegibility;
+  background-color: $whitish;
 }
 a {
-    outline: none;
-    color: $color-link;
-    text-decoration: none;
-    transition: color 0.2s;
+  outline: none;
+  color: $color-link;
+  text-decoration: none;
+  transition: color 0.2s;
 }
 a,
 span,
 strong {
-    &:after {
-        @extend %clearfix-none;
-    }
+  &:after {
+    @extend %clearfix-none;
+  }
 }
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
 h1,
 h2,
@@ -57,58 +49,58 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-family--primary;
-    margin: 0;
+  font-family: $font-family--secondary;
+  margin: 0;
 }
 h1 {
-    font-weight: bold;
-    font-size: $head1-font-size;
+  font-weight: bold;
+  font-size: $head1-font-size;
 }
 
 h2 {
-    font-weight: 600;
-    font-size: $head2-font-size;
+  font-weight: 600;
+  font-size: $head2-font-size;
 }
 
 h3 {
-    text-transform: capitalize;
-    font-size: $head3-font-size;
-    font-weight: bold;
+  text-transform: capitalize;
+  font-size: $head3-font-size;
+  font-weight: bold;
 }
 
 h4 {
-    font-weight: bold;
-    font-size: $head4-font-size;
+  font-weight: bold;
+  font-size: $head4-font-size;
 }
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+  max-width: 100%;
+  vertical-align: top;
 }
 select {
-    border: 1px solid $gray;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 4px;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 4px;
+  outline: none;
+  color: #ffffff;
+  width: 100%;
+
+  @include themify(theme-type(color)) {
+    background-color: theme-property(select-bg);
+  }
+
+  @include themify(theme-type(size)) {
+    font-size: theme-property(selectFontSize);
+    padding: theme-property(selectPadding);
+  }
+
+  &:focus {
     outline: none;
-    color: #ffffff;
-    width: 100%;
-
-    @include themify(theme-type(color)) {
-        background-color: theme-property(select-bg);
-    }
-
-    @include themify(theme-type(size)) {
-        font-size: theme-property(selectFontSize);
-        padding: theme-property(selectPadding);
-    }
-
-    &:focus {
-        outline: none;
-        border-color: $light-blue;
-    }
+    border-color: $light-blue;
+  }
 }
 option {
-    background-color: $white;
-    color: $black;
+  background-color: $white;
+  color: $black;
 }

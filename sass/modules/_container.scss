@@ -1,8 +1,18 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1152px;
-    margin: 0 auto;
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.main-container {
+  margin-top: 35px;
+  display: flex;
+
+  @include e(content) {
+    //   width: 73.6979%;
+    max-width: 849px;
+  }
 }

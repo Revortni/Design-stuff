@@ -1,0 +1,38 @@
+.side-bar {
+  /* max-width: 20.3993%; */
+  /* max-width: 230px; */
+  max-width: 235px;
+  display: flex;
+  padding-top: 24px;
+  padding-bottom: 18px;
+  flex-direction: column;
+
+  @include e(header) {
+    display: flex;
+  }
+
+  @include e(title) {
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    line-height: 15px;
+    color: $black;
+    margin-right: 20px;
+  }
+
+  @include e(item) {
+    padding: 0 20px 20px 20px;
+  }
+
+  @include e(item-title) {
+    text-transform: capitalize;
+    font-size: $xs-font-size;
+    color: $gray;
+    margin-bottom: 5px;
+  }
+
+  @include e(item-content) {
+    text-transform: capitalize;
+    font-size: $default-font-size;
+    font-weight: bold;
+  }
+}

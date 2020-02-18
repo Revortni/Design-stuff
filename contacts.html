@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LMS</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
+      rel="stylesheet"
+    />
+    <!--build:css css/style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--endbuild-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__sub-header">
+        <div class="container">
+          <div class="logo">
+            <a href="#home">
+              <img src="./images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__options">
+            <div class="header-nav">
+              <a
+                class="header-nav__link header-nav__link--is-active"
+                href="#projects"
+              >
+                Projects
+              </a>
+              <a class="header-nav__link" href="#timeline">
+                Timesheet
+              </a>
+              <a class="header-nav__link" href="#leave">
+                Leave
+              </a>
+            </div>
+            <div class="header-options__right">
+              <a href="#profile">
+                <div class="header-profile avatar">
+                  <div
+                    class="header-profile__image avatar__photo avatar__photo--large"
+                  >
+                    <img src="./images/pp.png" alt="profile" />
+                  </div>
+                  <span class="header-profile__info">
+                    Rojit Khayargoli
+                  </span>
+                </div>
+              </a>
+              <div class="logout">
+                <a href="#logout">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    class="icon--grey"
+                    height="32px"
+                    width="32px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-header">
+        <div class="container">
+          <nav class="tabs">
+            <a href="#" class="tabs__tab tabs__tab--is-active"
+              >Active Employees</a
+            >
+            <a href="#" class="tabs__tab">Reports</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="list-container">
+      <div class="container">
+        <div class="list">
+          <div class="list__title">
+            <h3>Active Employees</h3>
+          </div>
+          <div class="list__item">
+            <div class="avatar__photo  mr-10px">
+              <img src="./images/pp.png" alt="profile-photo" />
+            </div>
+            <div class="avatar__info">
+              <div class="avatar__name">Rojit Khayargoli</div>
+              <a href="tel:+9843080993">
+                <div class="avatar__phone">
+                  9843080993
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
