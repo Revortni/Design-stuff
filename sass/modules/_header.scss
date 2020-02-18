@@ -6,32 +6,13 @@
     border: 1px solid #cccccc82;
   }
 
-<<<<<<< HEAD
-    @include e(options) {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-grow: 1;
-        flex-direction: row;
-    }
-}
-
-.header-options {
-    @include e(right) {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-=======
   @include e(options) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
     flex-direction: row;
-    flex-wrap: wrap;
   }
->>>>>>> dev
 }
 
 .header-options {
