@@ -1,123 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>LMS</title>
-        <link
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700"
-            rel="stylesheet"
-        />
-        <!--build:css css/style.css-->
-        <link rel="stylesheet" href="css/style.css" />
-        <!--endbuild-->
-    </head>
-    <body>
-        <header class="header">
-            <div class="header__sub-header">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#home">
-                            <img src="./images/logo.svg" alt="logo" />
-                        </a>
-                    </div>
-                    <div class="header__options">
-                        <div class="header-nav">
-                            <a
-                                class="header-nav__link header-nav__link--is-active"
-                                href="#projects"
-                            >
-                                Projects
-                            </a>
-                            <a class="header-nav__link" href="#timeline">
-                                Timesheet
-                            </a>
-                            <a class="header-nav__link" href="#leave">
-                                Leave
-                            </a>
-                        </div>
-                        <div class="header-options__right">
-                            <a href="#profile">
-                                <div class="header-profile avatar">
-                                    <div
-                                        class="header-profile__image avatar__photo avatar__photo--large"
-                                    >
-                                        <img
-                                            src="./images/pp.png"
-                                            alt="profile"
-                                        />
-                                    </div>
-                                    <span class="header-profile__info">
-                                        Rojit Khayargoli
-                                    </span>
-                                </div>
-                            </a>
-                            <div class="logout">
-                                <a href="#logout">
-                                    <svg
-                                        stroke="currentColor"
-                                        fill="none"
-                                        strokeWidth="2"
-                                        viewBox="0 0 24 24"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        class="icon--grey"
-                                        height="32px"
-                                        width="32px"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"
-                                        ></path>
-                                        <polyline
-                                            points="16 17 21 12 16 7"
-                                        ></polyline>
-                                        <line
-                                            x1="21"
-                                            y1="12"
-                                            x2="9"
-                                            y2="12"
-                                        ></line>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>LMS</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Muli|Open+Sans|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <!--build:css css/style.css-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--endbuild-->
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__sub-header">
+        <div class="container">
+          <div class="logo">
+            <a href="#home">
+              <img src="./images/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__options">
+            <div class="header-nav">
+              <a
+                class="header-nav__link header-nav__link--is-active"
+                href="#projects"
+              >
+                Projects
+              </a>
+              <a class="header-nav__link" href="#timeline">
+                Timesheet
+              </a>
+              <a class="header-nav__link" href="#leave">
+                Leave
+              </a>
             </div>
-            <div class="sub-header">
-                <div class="container">
-                    <nav class="tabs">
-                        <a href="#" class="tabs__tab tabs__tab--is-active"
-                            >Active Employees</a
-                        >
-                        <a href="#" class="tabs__tab">Reports</a>
-                    </nav>
+            <div class="header-options__right">
+              <a href="#profile">
+                <div class="header-profile avatar">
+                  <div
+                    class="header-profile__image avatar__photo avatar__photo--large"
+                  >
+                    <img src="./images/pp.png" alt="profile" />
+                  </div>
+                  <span class="header-profile__info">
+                    Rojit Khayargoli
+                  </span>
                 </div>
+              </a>
+              <div class="logout">
+                <a href="#logout">
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    class="icon--grey"
+                    height="32px"
+                    width="32px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                  </svg>
+                </a>
+              </div>
             </div>
-        </header>
-        <div class="list-container">
-            <div class="container">
-                <div class="list">
-                    <div class="list__title">
-                        <h3>Active Employees</h3>
-                    </div>
-                    <div class="list__item">
-                        <div class="avatar__photo  mr-10px">
-                            <img src="./images/pp.png" alt="profile-photo" />
-                        </div>
-                        <div class="avatar__info">
-                            <div class="avatar__name">Rojit Khayargoli</div>
-                            <a href="tel:+9843080993">
-                                <div class="avatar__phone">
-                                    9843080993
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </body>
+      </div>
+      <!-- <div class="header__sub-header">
+        <div class="container">
+          <nav class="tabs">
+            <a href="#" class="tabs__tab tabs__tab--is-active"
+              >Active Employees</a
+            >
+            <a href="#" class="tabs__tab">Reports</a>
+          </nav>
+        </div>
+      </div> -->
+    </header>
+    <div class="breadcrumb">
+      <div class="container">
+        <nav>
+          <a href="#dashboard" class="breadcrumb__link">
+            dashboard
+          </a>
+          <a href="#project" class="breadcrumb__link">
+            project
+          </a>
+        </nav>
+      </div>
+    </div>
+    <div>
+      <div class="project-title">
+        <div class="container">
+          <h1 class="text--black">ConnectRN</h1>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="container flex--j-spacebtn">
+          <div class="side-bar card">
+            <div class="side-bar__header side-bar__item">
+              <h4 class="side-bar__title">
+                project information
+              </h4>
+              <a href="#edit" class="edit-icon">
+                <img src="./images/edit-pen.svg" alt="logo" />
+              </a>
+            </div>
+            <div clss="side-bar__content">
+              <div class="side-bar__item">
+                <div class="side-bar__item-title">
+                  project status
+                </div>
+                <div class="status status--warn">
+                  <div class="status__icon status__icon--warn"></div>
+                  <div class="status__text status__text--warn">
+                    in progress
+                  </div>
+                </div>
+              </div>
+              <div class="side-bar__item">
+                <div class="side-bar__item-title">
+                  account manager
+                </div>
+                <div class="side-bar__item-content ">
+                  bimal maharjan
+                </div>
+              </div>
+              <div class="side-bar__item">
+                <div class="side-bar__item-title">
+                  industry
+                </div>
+                <div class="side-bar__item-content ">
+                  advertisement
+                </div>
+              </div>
+              <div class="side-bar__item">
+                <div class="side-bar__item-title">
+                  tech stack
+                </div>
+                <div class="side-bar__item-content ">
+                  Sketch, javascript
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-container__content">
+            <div class="card">
+              <div class="card__header">
+                <h2 class="card__header-title">project health</h2>
+                <div class="status">
+                  <div class="status__text">high</div>
+                  <div class="status__icon status__icon--danger"></div>
+                </div>
+              </div>
+              <div class="accordion card-content">
+                <div class="card-content__header">
+                  <h3>risk status</h3>
+                  <a href="#" class="card-content__button">
+                    + add risk
+                  </a>
+                </div>
+                <div class="card-content__container">
+                  <div class="card-content__item  status">
+                    <div class="status__text">schedule</div>
+                    <div class="status__icon status__icon--success"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">code quality</div>
+                    <div class="status__icon status__icon--warn"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">team motivation</div>
+                    <div class="status__icon status__icon--danger"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">schedule</div>
+                    <div class="status__icon status__icon--success"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">code quality</div>
+                    <div class="status__icon status__icon--warn"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">team motivation</div>
+                    <div class="status__icon status__icon--danger"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">schedule</div>
+                    <div class="status__icon status__icon--success"></div>
+                  </div>
+                  <div class="card-content__item   status">
+                    <div class="status__text">code quality</div>
+                    <div class="status__icon status__icon--warn"></div>
+                  </div>
+                  <div class="card-content__item  status">
+                    <div class="status__text">team motivation</div>
+                    <div class="status__icon status__icon--danger"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h2 class="card__header-title">
+                  project members
+                  <span class="card__count">7</span>
+                </h2>
+              </div>
+              <div class="card-content  accordion  accordion--active">
+                <div class="groups">
+                  <div class="group ">
+                    <div class="group__title">pm</div>
+                    <div class="group__content ">
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  avatar__photo rounded">
+                            <img src="./images/pp.png" alt="profile" />
+                          </div>
+                        </div>
+                        <span class="profile__name  ">john doe</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group">
+                    <div class="group__title ">development</div>
+                    <div class="group__content">
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  avatar__photo rounded">
+                            <img src="./images/pp.png" alt="profile" />
+                          </div>
+                        </div>
+                        <span class="profile__name">john doe</span>
+                      </div>
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  avatar__photo rounded">
+                            <img src="./images/pp.png" alt="profile" />
+                          </div>
+                        </div>
+                        <span class="profile__name  ">john doe</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group group--add ">
+                    <div class="group__content">
+                      <div class="profile">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="group__add-button rounded">
+                            <svg
+                              stroke="currentColor"
+                              fill="currentColor"
+                              stroke-width="0"
+                              viewBox="0 0 24 24"
+                              height="32px"
+                              width="32px"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="profile__name">add</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h2 class="card__header-title">
+                  project phases
+                  <span class="card__count">2</span>
+                </h2>
+              </div>
+              <div class="card-content  accordion  accordion--active">
+                <div class="groups">
+                  <div class="group">
+                    <div class="group__content">
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  rounded">
+                            <div class="profile__id">1</div>
+                          </div>
+                        </div>
+                        <span class="profile__name">phase 1</span>
+                      </div>
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  rounded">
+                            <div class="profile__id">2</div>
+                          </div>
+                        </div>
+                        <span class="profile__name">phase 2</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group group--add">
+                    <div class="group__content">
+                      <div class="profile">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="group__add-button rounded">
+                            <svg
+                              stroke="currentColor"
+                              fill="currentColor"
+                              stroke-width="0"
+                              viewBox="0 0 24 24"
+                              height="32px"
+                              width="32px"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="profile__name">add</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__header">
+                <h2 class="card__header-title">
+                  project milestones
+                  <span class="card__count">2</span>
+                </h2>
+              </div>
+              <div class="card-content  accordion  accordion--active">
+                <div class="groups">
+                  <div class="group">
+                    <div class="group__content">
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  rounded">
+                            <div class="profile__id">1</div>
+                          </div>
+                        </div>
+                        <span class="profile__name">milestone 1</span>
+                      </div>
+                      <div class="profile accordion__trigger">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="profile__image  rounded">
+                            <div class="profile__id">2</div>
+                          </div>
+                        </div>
+                        <span class="profile__name">milestone 2</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group group--add">
+                    <div class="group__content">
+                      <div class="profile">
+                        <div
+                          class="group__image-border rounded rounded--border"
+                        >
+                          <div class="group__add-button rounded">
+                            <svg
+                              stroke="currentColor"
+                              fill="currentColor"
+                              stroke-width="0"
+                              viewBox="0 0 24 24"
+                              height="32px"
+                              width="32px"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+                              ></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="profile__name">add</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
