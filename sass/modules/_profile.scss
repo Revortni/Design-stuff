@@ -6,8 +6,8 @@
   align-items: center;
 
   @include e(image) {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     background-color: #b3b3b3;
     display: flex;
     align-items: center;
@@ -22,6 +22,9 @@
     text-align: center;
     margin-top: 4px;
     text-transform: capitalize;
+
+    & img {
+    }
     font-size: $s-font-size;
   }
 
